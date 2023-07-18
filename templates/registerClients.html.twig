@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Register Here</h1>
+
+        <form id="clientForm">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" >
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" >
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="checkbox" name="checkbox" >
+                <label for="checkbox">I agree to the terms and conditions</label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+       $(document).ready(function() {
+
+
+        $('#clientForm').submit(function(event) {
+        event.preventDefault();
+
+        var form = $(this);
+        var firstName = form.find('#firstName').val();
+        var lastName = form.find('#lastName').val();
+        var email = form.find('#email').val();
+        var checkbox = form.find('#checkbox').prop('checked');
+
+        // Frontend Validation
+        var errors = [];
+
+        if (firstName.trim() === '') {
+            errors.push('First name is required.');
+        }
+
+        if (lastName.trim() === '') {
+            errors.push('Last name is required.');
+        }
+
+        if (email.trim() === '') {
+            errors.push('Email is required.');
+        }
+
+        if (!checkbox) {
+            errors.push('Please agree to the terms and conditions.');
+        }
+
+        if (errors.length > 0) {
+            toastr.error(errors.join('<br>'));
+        } else {
+           $.ajax({
+                url: '/handleRegister', 
+                method: 'POST',
+                data: {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                },
+                success: function(response) {
+                    console.log(response);
+                    if (status === 'success') {
+                        toastr.success('Registration successful');
+                        location.reload();
+                        
+                    } else {
+                        toastr.error(response.message);
+                    }
+                },               
+            });
+
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

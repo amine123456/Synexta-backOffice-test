@@ -1,0 +1,79 @@
+.container {
+    margin: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-success {
+    background-color: #28a745;
+}
+
+/* DataTable styles */
+.dataTables_wrapper {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.dataTables_wrapper table.dataTable {
+    width: 100%;
+}
+
+.dataTables_wrapper table.dataTable thead th {
+    text-align: left;
+}
+
+.dataTables_wrapper table.dataTable tbody td {
+    vertical-align: middle;
+}
+
+.dataTables_wrapper .dataTables_info {
+    margin-top: 10px;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 10px;
+}
+

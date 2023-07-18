@@ -1,3 +1,26 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+
+app_client_edit:
+    path: '/client/edit/{id}'
+    controller: App\Controller\ClientController::edit
+
+
+app_client_delete:
+    path: '/client/delete/{id}'
+    controller: App\Controller\ClientController::delete
+    methods: ['POST']
+
+
+register:
+    path: '/register'
+    controller: App\Controller\ClientController::register
+    methods: ['GET']
+
+
+handleRegister:
+    path: '/handleRegister'
+    controller: App\Controller\ClientController::handleRegister
+    methods: ['POST']
