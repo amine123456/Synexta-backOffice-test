@@ -1,6 +1,5 @@
 # Synexta-backOffice-test
-This project is made for tesing and logic purposes the front parts and the design are not the best thing
-that you can see but its fine 
+
 
 // Please refer here to the  the username and the password for the admin account 
 
