@@ -1,16 +1,18 @@
 # Synexta-backOffice-test
 
 
-// Please refer here to the  the username and the password for the admin account 
+Veuillez vous référer ici pour obtenir le nom d'utilisateur et le mot de passe du compte administrateur :
 
-Username: amine12
+Login/Username: amine12
 Password: 1796amine 
 
-if you have any problem with authentication please contact me 
+Si vous rencontrez un problème d'authentification, veuillez me contacter.
 
 
-# for testing purposes you can use the database that i have already created and import
+# Pour les tests, vous pouvez utiliser la base de données que j'ai déjà créée et l'importer
 
-the file is called (syntexia-crud4.sql)
+Le fichier s'appelle (syntexia-crud4.sql)
 
-# otherwize if you end up migrating the database will be empty and you will have no way to authenticate and proceed 
+# Sinon, si vous finissez par effectuer une migration, la base de données sera vide et vous n'aurez aucun moyen de vous authentifier et de continuer dans ce cas merci d'utiliser la base que j'ai ajouter dans le projet
+
+Veuillez accéder à /login pour vous connecter et à /register pour enregistrer un client .
